@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields # type: ignore
 
 # Modelo de especialidades médicas
 class HospitalSpecialty(models.Model):
