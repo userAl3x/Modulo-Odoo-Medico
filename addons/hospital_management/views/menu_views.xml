@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menú Principal -->
+    <menuitem id="menu_hospital_root"
+              name="Hospital"
+              sequence="10"/>
+
+    <!-- Submenús -->
+    <menuitem id="menu_hospital_operations"
+              name="Operaciones"
+              parent="menu_hospital_root"
+              sequence="10"/>
+
+    <menuitem id="menu_hospital_configuration"
+              name="Configuración"
+              parent="menu_hospital_root"
+              sequence="100"/>
+
+    <!-- Elementos del Menú de Operaciones -->
+    <menuitem id="menu_hospital_appointment"
+              name="Citas"
+              parent="menu_hospital_operations"
+              action="action_hospital_appointment"
+              sequence="10"/>
+
+    <menuitem id="menu_hospital_patient"
+              name="Pacientes"
+              parent="menu_hospital_operations"
+              action="action_hospital_patient"
+              sequence="20"/>
+
+    <menuitem id="menu_hospital_doctor"
+              name="Doctores"
+              parent="menu_hospital_operations"
+              action="action_hospital_doctor"
+              sequence="30"/>
+
+    <!-- Elementos del Menú de Configuración -->
+    <menuitem id="menu_hospital_specialty"
+              name="Especialidades"
+              parent="menu_hospital_configuration"
+              action="action_hospital_specialty"
+              sequence="10"/>
+</odoo> 
