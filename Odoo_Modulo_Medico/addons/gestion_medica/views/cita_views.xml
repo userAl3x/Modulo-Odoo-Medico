@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de formulario -->
+    <record id="view_cita_form" model="ir.ui.view">
+        <field name="name">gestion.cita.form</field>
+        <field name="model">gestion.cita</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="estado" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="paciente_id"/>
+                            <field name="medico_id"/>
+                        </group>
+                        <group>
+                            <field name="fecha_hora"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de calendario -->
+    <record id="view_cita_calendar" model="ir.ui.view">
+        <field name="name">gestion.cita.calendar</field>
+        <field name="model">gestion.cita</field>
+        <field name="arch" type="xml">
+            <calendar string="Citas" date_start="fecha_hora" color="estado">
+                <field name="paciente_id"/>
+                <field name="medico_id"/>
+                <field name="estado"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Vista de árbol -->
+    <record id="view_cita_tree" model="ir.ui.view">
+        <field name="name">gestion.cita.tree</field>
+        <field name="model">gestion.cita</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="estado == 'programada'" decoration-success="estado == 'realizada'" decoration-danger="estado == 'cancelada'">
+                <field name="fecha_hora"/>
+                <field name="paciente_id"/>
+                <field name="medico_id"/>
+                <field name="estado"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de búsqueda -->
+    <record id="view_cita_search" model="ir.ui.view">
+        <field name="name">gestion.cita.search</field>
+        <field name="model">gestion.cita</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="paciente_id"/>
+                <field name="medico_id"/>
+                <field name="estado"/>
+                <filter string="Programadas" name="programadas" domain="[('estado', '=', 'programada')]"/>
+                <filter string="Realizadas" name="realizadas" domain="[('estado', '=', 'realizada')]"/>
+                <filter string="Canceladas" name="canceladas" domain="[('estado', '=', 'cancelada')]"/>
+                <group expand="0" string="Agrupar por">
+                    <filter string="Médico" name="medico" context="{'group_by': 'medico_id'}"/>
+                    <filter string="Estado" name="estado" context="{'group_by': 'estado'}"/>
+                    <filter string="Fecha" name="fecha" context="{'group_by': 'fecha_hora:day'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de ventana -->
+    <record id="action_cita" model="ir.actions.act_window">
+        <field name="name">Citas</field>
+        <field name="res_model">gestion.cita</field>
+        <field name="view_mode">calendar,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crear la primera cita
+            </p>
+        </field>
+    </record>
+</odoo> 
