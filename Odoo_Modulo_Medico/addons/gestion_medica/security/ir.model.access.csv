@@ -1,9 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_gestion_paciente_user,access.gestion.paciente.user,model_gestion_paciente,base.group_user,1,0,0,0
-access_gestion_medico_user,access.gestion.medico.user,model_gestion_medico,base.group_user,1,0,0,0
-access_gestion_especialidad_user,access.gestion.especialidad.user,model_gestion_especialidad,base.group_user,1,0,0,0
-access_gestion_cita_user,access.gestion.cita.user,model_gestion_cita,base.group_user,1,1,1,0
-access_gestion_paciente_admin,access.gestion.paciente.admin,model_gestion_paciente,base.group_system,1,1,1,1
-access_gestion_medico_admin,access.gestion.medico.admin,model_gestion_medico,base.group_system,1,1,1,1
-access_gestion_especialidad_admin,access.gestion.especialidad.admin,model_gestion_especialidad,base.group_system,1,1,1,1
-access_gestion_cita_admin,access.gestion.cita.admin,model_gestion_cita,base.group_system,1,1,1,1
