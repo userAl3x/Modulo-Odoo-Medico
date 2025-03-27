@@ -1,1 +1,2 @@
-Módulo Odoo de Gestión de Citas Médicas realizado por Alex Jiménez y Pau Alcaraz
+Módulo Odoo de Gestión de Citas Médicas implementado en Docker.
+Autor: Alex Jiménez Quiñonero.
