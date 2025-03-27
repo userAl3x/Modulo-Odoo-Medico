@@ -4,7 +4,7 @@
     'summary': 'Módulo para gestionar citas médicas',                                                    # Resumen del módulo
     'description': 'Sistema de gestión de citas médicas con pacientes, médicos y especialidades',        # Descripción detallada
     'category': 'Healthcare',                                                                            # Categoría del módulo
-    'author': 'Alex Jiménez y Pau Alcaraz',                                                              # Autor del módulo
+    'author': 'Alex Jiménez Quiñonero',                                                                  # Autor del módulo
     'website': '',                                                                                       # Sitio web del módulo
     'license': 'LGPL-3',
     'depends': ['base'],
