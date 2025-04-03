@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <field name="estado" widget="statusbar"/>
+                    <field name="estado" widget="statusbar" options="{'clickable': '1'}"/>
                 </header>
                 <sheet>
                     <group>
@@ -17,6 +17,7 @@
                         </group>
                         <group>
                             <field name="fecha_hora"/>
+                            <field name="estado" widget="selection"/>
                         </group>
                     </group>
                 </sheet>
